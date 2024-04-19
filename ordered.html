@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body{
+            background-color: salmon;
+        }
+        .order-notification {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f3f3f3;
+            padding: 20px;
+            border: 2px solid #d40808;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="orderNotification" class="order-notification">
+        <h2 style="color:red;">Order Placed!</h2>
+        <p style="color:red;">Your order has been successfully placed. Thank you!</p>
+    </div>
+
+    <script>
+        // Simulating order placement process
+        // In a real scenario, this would involve AJAX request to a server
+        setTimeout(function() {
+            document.getElementById('orderNotification').classList.add('show');
+        }, 2000); // Showing the notification after 2 seconds
+    </script>
+</body>
+</html>
